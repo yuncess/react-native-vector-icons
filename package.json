@@ -1,6 +1,6 @@
 {
   "name": "react-native-vector-icons-yuncess",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "react-native-vector-icons-yuncess",
   "main": "dist/index.js",
   "bin": {
@@ -8,9 +8,12 @@
   },
   "scripts": {
     "test": "eslint index.js {bin,lib}/*.js",
-    "build": "rm -rf {Fonts,ZIcon.js,glyphmaps} && mkdir Fonts glyphmaps && npm run build-zicon",
-    "build-web": "rm -rf ./dist && babel ./{,lib}/*.js --out-dir ./dist && cp -R ./glyphmaps ./dist/glyphmaps",
-    "build-zicon": "node bin/generate-icon zicon/iconfont.css --prefix=zIcon- --componentName=ZIcon --fontFamily=zIcon --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/ZIcon.json > ZIcon.js && cp zicon/iconfont.ttf Fonts/ZIcon.ttf"
+    "build":
+      "rm -rf {Fonts,ZIcon.js,glyphmaps} && mkdir Fonts glyphmaps && npm run build-zicon",
+    "build-web":
+      "rm -rf ./dist && babel ./{,lib}/*.js --out-dir ./dist && cp -R ./glyphmaps ./dist/glyphmaps",
+    "build-zicon":
+      "node bin/generate-icon zicon/iconfont.css --prefix=zIcon- --componentName=ZIcon --fontFamily=zIcon --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/ZIcon.json > ZIcon.js && cp zicon/iconfont.ttf Fonts/ZIcon.ttf"
   },
   "keywords": [
     "react-native",
@@ -41,9 +44,7 @@
   },
   "license": "MIT",
   "rnpm": {
-    "assets": [
-      "Fonts"
-    ]
+    "assets": ["Fonts"]
   },
   "dependencies": {
     "lodash": "^4.0.0",
